@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--
+    Backstory weighting.
+    A few fitting backstories always come with the trait (the same way vanilla ties Psychopath to the torturer and assassin).
+    Caring professions never get it.
+    Every operation is marked success=Always, so another mod removing or changing one of these backstories can't cause an error.
+    Each list is patched twice: once for backstories that already have the list, once for those that don't.
+  -->
+
+  <!-- Always Sociopath: con artist. -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[defName="ConArtist80"]/forcedTraits</xpath>
+    <value><SP_Sociopath>2</SP_Sociopath></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[defName="ConArtist80" and not(forcedTraits)]</xpath>
+    <value><forcedTraits><SP_Sociopath>2</SP_Sociopath></forcedTraits></value>
+  </Operation>
+
+  <!-- Always Callous: corporate manager, space pirate, child spy. -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[defName="CorporateManager76" or defName="SpacePirate55" or defName="ChildSpy47"]/forcedTraits</xpath>
+    <value><SP_Sociopath>1</SP_Sociopath></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[(defName="CorporateManager76" or defName="SpacePirate55" or defName="ChildSpy47") and not(forcedTraits)]</xpath>
+    <value><forcedTraits><SP_Sociopath>1</SP_Sociopath></forcedTraits></value>
+  </Operation>
+
+  <!-- Never either degree: carers and healers. -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[defName="CharityWorker36" or defName="Nurse61" or defName="Paramedic45" or defName="Counselor26" or defName="Healer46" or defName="MedicalAssistant12" or defName="MedievalDoctor40"]/disallowedTraits</xpath>
+    <value>
+      <SP_Sociopath>1</SP_Sociopath>
+      <SP_Sociopath>2</SP_Sociopath>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[(defName="CharityWorker36" or defName="Nurse61" or defName="Paramedic45" or defName="Counselor26" or defName="Healer46" or defName="MedicalAssistant12" or defName="MedievalDoctor40") and not(disallowedTraits)]</xpath>
+    <value>
+      <disallowedTraits>
+        <SP_Sociopath>1</SP_Sociopath>
+        <SP_Sociopath>2</SP_Sociopath>
+      </disallowedTraits>
+    </value>
+  </Operation>
+
+</Patch>

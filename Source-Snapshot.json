@@ -1,0 +1,91 @@
+{
+  "name": "Sociopath",
+  "packageId": "sociopath.trait",
+  "assemblyName": "Sociopath",
+  "repositoryName": "rimworld-psyche-sociopath",
+  "workshopId": "3804356481",
+  "metadataVersions": [
+    "1.6",
+    "1.7"
+  ],
+  "originalSourceUnit": "Psyche Mods/Sociopath",
+  "sourceSnapshotUtc": "2026-10-28T17:10:15.665Z",
+  "sourceFileFingerprints": [
+    {
+      "path": "About/About.xml",
+      "sha256": "CE054F7414F86209528C1CFB036A926360D01918A1B9712B8F0CAA5B2891E361",
+      "bytes": 2275
+    },
+    {
+      "path": "About/Preview.png",
+      "sha256": "4F8E727CABF9AE5FCFB932AF381988BEFC15126180396E18E7ABF2C9567072CD",
+      "bytes": 121133
+    },
+    {
+      "path": "About/PublishedFileId.txt",
+      "sha256": "BC5404FCBFCB15D935BD55199ED78EEA8DF24300D455EFE206FBBB3A1319AC8F",
+      "bytes": 10
+    },
+    {
+      "path": "Defs/InteractionDefs/Sociopath_Interactions.xml",
+      "sha256": "114874A9F6372E8E22C4B1834A7227B5A007557F0D445325C102D1C19D2198FB",
+      "bytes": 1036
+    },
+    {
+      "path": "Defs/NeedDefs/Sociopath_Needs.xml",
+      "sha256": "E9AAFE21935ECD1ACC27A28A4172C4FF03F23BDCA9FE6444BFBCD3BB30E3B740",
+      "bytes": 819
+    },
+    {
+      "path": "Defs/ThoughtDefs/Sociopath_Thoughts.xml",
+      "sha256": "86B453FA60068A2750C2B9B80FECF7F7965B74CF25359A2FFCFF848685226B7C",
+      "bytes": 5851
+    },
+    {
+      "path": "Defs/TraitDefs/Sociopath_Trait.xml",
+      "sha256": "6AA98665AE2A3F5E6898DCD21DCE3ABCCFDC0FC6C5FF665B026C385216C35C28",
+      "bytes": 2360
+    },
+    {
+      "path": "Patches/Sociopath_Backstories.xml",
+      "sha256": "8711BEBA54A888A2A0417D2F54218A15D21BC577C777B56BB08E5E9E69CB6A0F",
+      "bytes": 2601
+    },
+    {
+      "path": "Patches/Sociopath_SelectiveEmpathy.xml",
+      "sha256": "D2E1433EE7D1C00F6242CF661E7902629FC81D4197AB20F1A45E677AEB77C562",
+      "bytes": 1673
+    },
+    {
+      "path": "Source/Sociopath/HarmonyPatches.cs",
+      "sha256": "F433F159198AA998D53AFCC853AD887BA77A65A12EF5EA910B804F4E6E725EE7",
+      "bytes": 14476
+    },
+    {
+      "path": "Source/Sociopath/Settings.cs",
+      "sha256": "20EA183A044D737F141B6BC1DD996D4A414C985E19A5D9EBBA94DBB75956694A",
+      "bytes": 7865
+    },
+    {
+      "path": "Source/Sociopath/Sociopath.csproj",
+      "sha256": "1DFB028E7DF254BED75BE106208586D8B59D16F1F3D2D3DE9495F89C361C8608",
+      "bytes": 1633
+    },
+    {
+      "path": "Source/Sociopath/SociopathMod.cs",
+      "sha256": "F427D23E479E8876B95529A5711AB93CE48BA911034930D30F919515A0DF2F29",
+      "bytes": 11489
+    },
+    {
+      "path": "Source/Sociopath/Thrill.cs",
+      "sha256": "7BCEBD90652646CBE3FBBC43550C4BB1C8C2DEB5B963B99855422565F5E74E16",
+      "bytes": 6049
+    }
+  ],
+  "stagedProjectAdjustments": [],
+  "build16": "NOT_RUN_THIS_PASS",
+  "build17": "COMPILED_AGAINST_LOCAL_1.7_API",
+  "nativePlaytest": "NOT_RUN_THIS_PUBLICATION_PASS",
+  "gameplaySourceModified": false,
+  "compiled17SHA256": "5FC53AF19341CD98E2CBF9EA7D684734663E420A7BD65721AB455659E6EEC7BE"
+}

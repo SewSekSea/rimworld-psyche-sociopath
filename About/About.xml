@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Sociopath</name>
+  <author>T&amp;B Modding</author>
+  <packageId>sociopath.trait</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+    <li>1.7</li>
+  </supportedVersions>
+  <description>Adds the Sociopath trait in two strengths: Callous (mild) and Sociopath (full). These are colonists who are charming when things go well, cold when they don’t, and never forget a slight.
+
+Unlike the vanilla Psychopath, they keep a small inner circle (family, lovers, the few people they rate highly) and still grieve for them. Everyone else is a tool or an obstacle.
+
+Both strengths:
+- Selective empathy: indifferent to strangers’ deaths, executions, organ harvesting and butchery.
+- The mask: a Charm interaction while content, sharper insults once stressed.
+- Seen through: insult someone you charmed and they realise it was an act.
+- Unsettling presence: colonists near a stressed one feel uneasy.
+
+Sociopath only:
+- Grudge ledger: insults and harm are remembered 3× as long; kindness fades 3× as fast.
+- Shallow affect: events move their mood only 60% as much.
+- Thrill need: they get bored. Conflict, violence and manipulation keep it topped up, and assigned hunting, slaughtering or fighting refills it steadily.
+- Cause-linked breaks: they go after the person they resent, and never mope or go catatonic.
+- Settling scores: taking it out on the grudge target ends the grudge.
+- Protective streak: hurt someone in their inner circle and you become their enemy.
+- Cold under fire: no mental breaks mid-fight, paid for with a mood penalty afterwards.
+
+Also: con artists are always Sociopaths; corporate managers, space pirates and child spies are Callous; nurses, healers and counsellors never get either.
+
+Every number can be tuned, and each optional behaviour switched off, in Options → Mod settings → Sociopath.
+
+Requires Harmony. Safe to add to an existing save.</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+  </loadAfter>
+</ModMetaData>

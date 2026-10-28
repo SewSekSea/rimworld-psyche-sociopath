@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Mood from the Thrill need. Only Sociopaths can get it. -->
+  <ThoughtDef>
+    <defName>SP_ThrillLevel</defName>
+    <workerClass>Sociopath.ThoughtWorker_Thrill</workerClass>
+    <requiredTraits>
+      <li>SP_Sociopath</li>
+    </requiredTraits>
+    <requiredTraitsDegree>2</requiredTraitsDegree>
+    <stages>
+      <li>
+        <label>bored out of my skull</label>
+        <description>Nothing ever happens here. I need something to happen. Anything.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+      <li>
+        <label>restless</label>
+        <description>Same faces, same chores, same nothing.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+      <li>
+        <label>buzzing</label>
+        <description>Now that was interesting.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Gained when a mental break ends after going after a grudge target. -->
+  <ThoughtDef>
+    <defName>SP_SettledScore</defName>
+    <durationDays>5</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>settled a score with {0}</label>
+        <description>{0} had it coming. We're even now.</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Gained when the Sociopath kills someone they held a grudge against. -->
+  <ThoughtDef>
+    <defName>SP_SettledScoreForGood</defName>
+    <durationDays>10</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>{0} got what was coming</label>
+        <description>{0} won't be a problem any more.</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Given to the target of the Sociopath's charm. The opinion is real; the warmth behind it isn't. -->
+  <ThoughtDef>
+    <defName>SP_Charmed</defName>
+    <showBubble>true</showBubble>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>12</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitForSameOtherPawn>5</stackLimitForSameOtherPawn>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    <socialTargetDevelopmentalStageFilter>Adult</socialTargetDevelopmentalStageFilter>
+    <stages>
+      <li>
+        <label>charmed</label>
+        <baseOpinionOffset>10</baseOpinionOffset>
+      </li>
+    </stages>
+    <thoughtToMake>SP_CharmedMood</thoughtToMake>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>SP_CharmedMood</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.8</stackedEffectMultiplier>
+    <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>flattered</label>
+        <description>Someone finally noticed what I'm good at.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Seen through: the charmed person realises it was an act. Given to them, about the charmer. -->
+  <ThoughtDef>
+    <defName>SP_SawThrough</defName>
+    <showBubble>true</showBubble>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>30</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    <socialTargetDevelopmentalStageFilter>Adult</socialTargetDevelopmentalStageFilter>
+    <stages>
+      <li>
+        <label>saw through the act</label>
+        <baseOpinionOffset>-30</baseOpinionOffset>
+      </li>
+    </stages>
+    <thoughtToMake>SP_SawThroughMood</thoughtToMake>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>SP_SawThroughMood</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>3</stackLimit>
+    <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>they were playing me</label>
+        <description>All that charm, and it was an act the whole time.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Protective streak: given to a Sociopath about whoever hurt their inner circle. -->
+  <ThoughtDef>
+    <defName>SP_HurtOneOfMine</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>30</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>hurt one of mine</label>
+        <baseOpinionOffset>-50</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Cold under fire: a break that was held back in combat, paid for afterwards. -->
+  <ThoughtDef>
+    <defName>SP_HeldItTogether</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>held it together under fire</label>
+        <description>I kept it together when it counted. Now it is all catching up with me.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Unsettling presence: felt by colonists near a stressed Sociopath or Callous colonist. -->
+  <ThoughtDef>
+    <defName>SP_Unsettled</defName>
+    <workerClass>Sociopath.ThoughtWorker_Unsettled</workerClass>
+    <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    <nullifyingTraits>
+      <li>SP_Sociopath</li>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>unsettling presence</label>
+        <description>Someone around here has a look in their eyes lately that I do not like.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

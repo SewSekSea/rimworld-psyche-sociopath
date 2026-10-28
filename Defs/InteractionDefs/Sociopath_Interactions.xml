@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <InteractionDef>
+    <defName>SP_Charm</defName>
+    <label>charm</label>
+    <workerClass>Sociopath.InteractionWorker_Charm</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/KindWords</symbol>
+    <recipientThought>SP_Charmed</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] [charmed] [RECIPIENT_nameDef] with [flattery].</li>
+
+        <li>charmed(p=3)->charmed</li>
+        <li>charmed->won over</li>
+        <li>charmed->buttered up</li>
+        <li>charmed->flattered</li>
+        <li>charmed->worked on</li>
+
+        <li>flattery->a well-timed compliment</li>
+        <li>flattery->a story that made them laugh</li>
+        <li>flattery->exactly the right question</li>
+        <li>flattery->lavish praise for their work</li>
+        <li>flattery->a confidence that was probably untrue</li>
+        <li>flattery->rapt, unblinking attention</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+
+</Defs>

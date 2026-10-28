@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <NeedDef>
+    <defName>SP_Thrill</defName>
+    <needClass>Sociopath.Need_Thrill</needClass>
+    <label>thrill</label>
+    <description>Sociopaths get bored. Thrill drains slowly over about five waking days. It is restored by combat, hurting people, social fights, insulting or charming others, and by the aftermath of a mental break. It also rises steadily while they do hunting, slaughtering, executions or fighting that you have assigned.</description>
+    <minIntelligence>Humanlike</minIntelligence>
+    <colonistsOnly>true</colonistsOnly>
+    <onlyIfCausedByTrait>true</onlyIfCausedByTrait>
+    <freezeWhileSleeping>true</freezeWhileSleeping>
+    <listPriority>450</listPriority>
+    <developmentalStageFilter>Adult</developmentalStageFilter>
+  </NeedDef>
+
+</Defs>

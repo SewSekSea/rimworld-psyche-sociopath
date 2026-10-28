@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- One trait, two degrees: Callous (1) is the mild form, Sociopath (2) the full one. -->
+  <TraitDef>
+    <defName>SP_Sociopath</defName>
+    <commonality>0.8</commonality>
+    <degreeDatas>
+      <li>
+        <label>callous</label>
+        <degree>1</degree>
+        <commonality>1</commonality>
+        <description>{PAWN_nameDef} is charming when it suits {PAWN_objective} and cold when it doesn't. Strangers' suffering means little to {PAWN_objective}, but {PAWN_pronoun} still cares about a small inner circle: family, lovers and the few people {PAWN_pronoun} truly rates. When stressed, the charm drops away.</description>
+        <statOffsets>
+          <SocialImpact>0.1</SocialImpact>
+          <NegotiationAbility>0.1</NegotiationAbility>
+        </statOffsets>
+      </li>
+      <li>
+        <label>sociopath</label>
+        <degree>2</degree>
+        <commonality>1.75</commonality>
+        <description>{PAWN_nameDef} is charming when it suits {PAWN_objective} and cold when it doesn't. Strangers' suffering means nothing to {PAWN_objective}, but {PAWN_pronoun} still cares about a small inner circle: family, lovers and the few people {PAWN_pronoun} truly rates. Anyone who hurts them becomes an enemy.\n\n{PAWN_pronoun} remembers every slight three times as long and forgets kindness three times as fast. Events move {PAWN_possessive} mood less than other people's, but {PAWN_pronoun} gets bored without some excitement. {PAWN_pronoun} holds together in a fight and pays for it afterwards. When {PAWN_pronoun} breaks, {PAWN_pronoun} doesn't mope. {PAWN_pronoun} goes after whoever {PAWN_pronoun} holds a grudge against.</description>
+        <socialFightChanceFactor>2.5</socialFightChanceFactor>
+        <statOffsets>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
+          <SocialImpact>0.15</SocialImpact>
+          <NegotiationAbility>0.15</NegotiationAbility>
+        </statOffsets>
+        <disallowedMentalStates>
+          <li>Wander_Sad</li>
+          <li>Wander_OwnRoom</li>
+          <li>Wander_Psychotic</li>
+        </disallowedMentalStates>
+        <enablesNeeds>
+          <li>SP_Thrill</li>
+        </enablesNeeds>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Psychopath</li>
+      <li>Kind</li>
+    </conflictingTraits>
+  </TraitDef>
+
+</Defs>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--
+    Selective empathy, part 1 (data only).
+    A Sociopath doesn't care about strangers, abstract morality, or small talk.
+    Every def below already has a nullifyingTraits list in vanilla 1.6 (it names Psychopath),
+    so we add SP_Sociopath to that list.
+
+    Left out on purpose (the Sociopath still feels these):
+    - family grief (MyXDied), WitnessedDeathFamily: the inner circle
+    - PawnWithGoodOpinionDied / Lost: handled in C#; only inner-circle deaths count
+    - bonded-animal thoughts: the dog may be the one thing they love
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThoughtDef[
+      defName="KnowGuestExecuted" or
+      defName="KnowColonistExecuted" or
+      defName="KnowPrisonerDiedInnocent" or
+      defName="KnowColonistDied" or
+      defName="ColonistLost" or
+      defName="KnowPrisonerSold" or
+      defName="KnowGuestOrganHarvested" or
+      defName="KnowColonistOrganHarvested" or
+      defName="ButcheredHumanlikeCorpse" or
+      defName="KnowButcheredHumanlikeCorpse" or
+      defName="ButcheredHumanlikeCorpseOpinion" or
+      defName="ObservedLayingCorpse" or
+      defName="WitnessedDeathAlly" or
+      defName="WitnessedDeathNonAlly" or
+      defName="DeniedJoining" or
+      defName="ColonistBanished" or
+      defName="ColonistBanishedToDie" or
+      defName="PrisonerBanishedToDie" or
+      defName="HumanLeatherApparelSad" or
+      defName="SoldPrisoner" or
+      defName="ColonistLeftUnburied" or
+      defName="Chitchat" or
+      defName="DeepTalk"
+    ]/nullifyingTraits</xpath>
+    <value>
+      <li>SP_Sociopath</li>
+    </value>
+  </Operation>
+
+</Patch>
